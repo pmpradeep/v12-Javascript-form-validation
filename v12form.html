@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V12</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/v12.js"></script>
+    <link rel="stylesheet" href="./css/v12.css">
+    
+    
+</head>
+
+<body>
+    <div class="container-fluid  w-100 bg-linear">
+        <div class="row bg-w mx-auto">
+            <div class="col">
+                <h2 class="title text-center">Form</h2>
+                <div class="card mx-auto" style="width:100%;">
+
+                    <div class="card-body form bg-bl">
+
+
+                        <label for="username">Username</label>
+                        <input type="username" id="username" placeholder=" starts with letter, letter/numbers/_ , min 4,15" oninput="isusername()" onblur="isusername()">
+                        <p id="uname-error" class="err"></p>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="one number,one small letter,one cap letter,special char min 4,12" oninput="ispassword()" onblur="ispassword()">
+                        <p id="pwd-error" class="err"></p>
+
+                        <label for="confirmpassword">Confirm Password</label>
+                        <input type="password" id="confirmpassword" placeholder="password and confirm password must be same"  oninput="confpassword()" onblur="confpassword()">  
+                        <p id="con-pwd-error" class="err"></p>
+
+                        <label for="name">Name</label>
+                        <input type="name" id="name" placeholder="only letters min 4,15" oninput="isname()" onblur="isname()">
+                        <p id="name-error" class="err"></p>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="name@gmail.com"  oninput="isemail()" onblur="isemail()">
+                        <p id="email-error" class="err"></p>
+
+                        <label for="gender">Gender</label> <br>
+                        <input type="radio" class="radio" name="gender" id="male" value="male" oninput="isradio()" onblur="isradio()" >
+                        <label for="male">Male</label> <br>
+                        <input type="radio" name="gender" id="female" class="radio" value="female" oninput="isradio()" onblur="isradio()">
+                        <label for="female">Female</label><br>
+                        <p id="gen-error" class="err"></p>
+
+                        <label for="hobbies">Hobbies</label><br>
+
+                        <input type="checkbox" name="biking" id="biking"  oninput="ishobbie()" onblur="ishobbie()" > 
+                        <label for="biking">Biking</label><br>
+                        <input type="checkbox" name="painting" id="painting"   oninput="ishobbie()" onblur="ishobbie()" >
+                        <label for="painting">Painting</label><br>
+                        <p id="chkbox-error" class="err"></p>
+
+                        <label for="date">Date</label><br>
+                        <input type="date" id="date" min="2023-04-28"  oninput="isdate()" onblur="isdate()"><br>
+                        <p id="date-error" class="err"></p>
+
+                        <label for="country">Country</label><br>
+                       
+                        <select id="country" name="country" onchange="isselect()" >
+                            <option value ="">Select a country</option>
+                            <option value="India">India</option>
+                            <option value="Usa">Usa</option>
+                            <option value="Africa">Africa</option>
+                        </select>
+                        <p id="select-error" class="err"></p>
+
+                            <div class="row">
+                                <a href="#" class="btn fw-bold btn-primary p-2 w-75 mx-auto" onclick="valid()">Submit</a>
+                            </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
